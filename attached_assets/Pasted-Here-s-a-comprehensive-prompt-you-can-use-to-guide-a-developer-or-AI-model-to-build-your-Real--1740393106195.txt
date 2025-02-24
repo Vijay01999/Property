@@ -1,0 +1,137 @@
+Here's a **comprehensive prompt** you can use to guide a developer or AI model to build your **Real-Estate Dynamic Website** for Bareilly:
+
+---
+
+### 📋 **Project Prompt: Bareilly Property Hub – Real-Estate Dynamic Website**
+
+**Objective:**  
+Create a **dynamic real-estate website** focused on **Bareilly** where users can **register, log in, list properties** (with images, land size, price, and contact details), and view all property listings on a **map**. Users should also be able to **search, filter**, and view property details.
+
+---
+
+### ✅ **Core Features:**
+
+#### 👤 **User Authentication:**  
+- **User Registration & Login** (email & password)  
+- **Password encryption** (bcrypt or similar)  
+- **Forgot Password** functionality  
+- **User Dashboard** to manage personal property listings
+
+#### 🏡 **Property Listing:**  
+- Property submission form including:  
+  - **Title**  
+  - **Description**  
+  - **Upload multiple images**  
+  - **Land size** (sq. ft./acres)  
+  - **Asking Price**  
+  - **Location** (address, with Google Map pin)  
+  - **Contact Phone Number**  
+- Save property details in the database  
+- Allow users to **edit/delete** their listings
+
+#### 🔍 **Search & Filter:**  
+- Filter properties based on:  
+  - Price range  
+  - Land size  
+  - Location (Bareilly-specific)  
+- Keyword-based search
+
+#### 🗺️ **Google Maps Integration:**  
+- Integrate **Google Maps API** to:  
+  - Show all properties pinned on Bareilly’s map  
+  - Allow users to click pins to see property details
+
+#### 📊 **Admin Panel:**  
+- Manage **users** and **property listings**  
+- Remove spam/inappropriate listings  
+- View site analytics (optional)
+
+---
+
+### ⚙️ **Technical Requirements:**
+
+- **Frontend:** HTML, CSS, JavaScript (Bootstrap for responsiveness)  
+- **Backend:** PHP (Laravel) or Python (Django/Flask)  
+- **Database:** MySQL (to store users, properties, images)  
+- **API Integration:** Google Maps API for property locations  
+- **Image Storage:** Local or AWS S3 (optional for scaling)  
+- **Security:** Implement CSRF protection, input validation, and hashed passwords
+
+---
+
+### 📁 **Database Structure:**
+
+#### **Users Table:**  
+- `user_id` *(Primary Key)*  
+- `name`  
+- `email`  
+- `password` *(hashed)*  
+- `phone_number`  
+- `registration_date`  
+
+#### **Properties Table:**  
+- `property_id` *(Primary Key)*  
+- `user_id` *(Foreign Key to Users Table)*  
+- `title`  
+- `description`  
+- `price`  
+- `size` *(sq. ft./acres)*  
+- `location` *(address)*  
+- `latitude` *(Google Map coordinates)*  
+- `longitude` *(Google Map coordinates)*  
+- `phone_number`  
+- `created_at`  
+
+#### **Images Table:**  
+- `image_id` *(Primary Key)*  
+- `property_id` *(Foreign Key to Properties Table)*  
+- `image_url`
+
+---
+
+### 🌐 **Website Pages:**
+
+1. **Homepage:**  
+   - Featured properties  
+   - Search bar & filters  
+   - Google Map showing properties  
+
+2. **Login/Register Page:**  
+   - Secure user authentication  
+
+3. **User Dashboard:**  
+   - List, edit, or delete properties  
+
+4. **Property Details Page:**  
+   - Full property info, images, contact, and map  
+
+5. **List New Property Page:**  
+   - Form for adding new listings  
+
+6. **Admin Panel:**  
+   - Manage users & listings  
+
+7. **Contact Us & About Us Pages**
+
+---
+
+### 🏆 **Additional Features (Optional):**  
+- **Favorites:** Allow users to save favorite properties  
+- **Live Chat:** Enable real-time communication between buyers and sellers  
+- **Notification System:** Email users when their property is listed or sold  
+- **SEO Optimization:** Use proper meta tags, schema markup, etc.  
+
+---
+
+### 🛠️ **Workflow:**
+
+1. **User registers/logins**  
+2. **List property** (with images & location)  
+3. **Properties stored in the database**  
+4. **Users can search & filter listings**  
+5. **Google Map displays property locations**  
+6. **Admin manages users & listings**
+
+---
+
+This prompt provides everything needed to start building the website. Would you like me to create the **database schema** or the **login system code** first? 🚀
